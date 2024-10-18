@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+:root{ 
+    --DesaturatedRed: hsl(0, 36%, 70%);
+    --SoftRed: hsl(0, 93%, 68%);
+    --DarkGrayishRed: hsl(0, 6%, 24%);
+
+    --Linear1: hsl(0, 0%, 100%);
+    --Linear2: hsl(0, 100%, 98%);
+    --Linear3: hsl(0, 80%, 86%);
+    --Linear4: hsl(0, 74%, 74%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+    color: var(--DesaturatedRed);
+}
+.container{
+    width: 375px;
+    height: 800px;
+    margin: 0 auto 80px;
+    background-color: var(--Linear2);
+}
+.container_logo{
+    width: 100px;
+    margin: 30px;
+}
+.container_picture{
+    margin-bottom: 60px;
+}
+.container_content_title{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    color: var(--DarkGrayishRed);
+    font-weight: 700;
+    letter-spacing: 11px;
+    margin-bottom: 30px;
+}
+.container_content_title--color{
+    color: var(--DesaturatedRed);
+    font-weight: 300;
+}
+.container_content_description{
+    margin: 0 40px 40px;
+    text-align: center;
+    font-size: 0.85em;
+    line-height: 1.4em;
+}
+.container_content_form{
+    width: 310px;
+    height: 50px;
+    margin: auto;
+    position: relative;
+}
+.container_content_form_email{
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    padding-left: 16px;
+    border: 1px solid var(--DesaturatedRed);
+    outline: none;
+    background-repeat: no-repeat;
+    background-position: 210px ;
+}
+.container_content_form_email::placeholder{
+    color: var(--DesaturatedRed);
+}
+.container_content_form_email.error {
+    background-image: url('./images/icon-error.svg');  /* Imagen de error */
+    background-repeat: no-repeat;
+    background-position: 210px ;
+    border: 2px solid var(--SoftRed); /* Borde en rojo */
+}
+.container_content_form_button{
+    position: absolute;
+    right: 0;
+    width: 65px;
+    height: 50px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, var(--Linear3),var(--Linear4));
+    padding: 14px 25px;
+}
+.container_content_form_button:hover{
+    cursor: pointer;
+    background: linear-gradient(135deg, var(--Linear2),var(--Linear4));
+    box-shadow: 0 10px 15px var(--Linear4);
+}
+.container_content_form_email--error {
+    font-size: 0.85em;
+    margin: 8px 0 0 14px;
+    color: var(--SoftRed); /* Texto en rojo */
+    display: block; /* Asegúrate de que esté visible */
+}
+
+/* --------FOOTER---------- */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* *************DESKTOP MODE */
+@media only screen and (min-width: 1440px){
+    .container{
+        width: 1470px;
+        height: 800px;
+        background-image: url(./images/bg-pattern-desktop.svg);
+        position: relative;
+    }
+    .container_logo{
+        width: 150px;
+        margin: 85px 0 0 136px;
+    }
+    .container_picture{
+        content: url(./images/hero-desktop.jpg);
+        position: absolute;
+        right: 0;
+    }
+    .container_content{
+        width: 444px;
+        margin: 125px 0 0 136px;
+    }
+    .container_content_title{
+        text-align: left;
+        font-size: 4.1em;
+        letter-spacing: 15px;
+    }
+    .container_content_description{
+        text-align: left;
+        font-size: 1em;
+        margin: 0 0 40px;
+    }
+    .container_content_form{
+        width: 100%;
+        height: 60px;
+    }
+    .container_content_form_email{
+        background-position: 300px;
+    }
+    .container_content_form_email.error{
+        background-position: 300px ;
+    }
+    .container_content_form_button{
+        width: 100px;
+        height: 62px;
+        padding: 20px 42px;
+    }
+}
